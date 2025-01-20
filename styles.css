@@ -7,6 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    transition: background-color 1s;
+}
+
+body.night-mode {
+    background-color: #333;
+    color: #fff;
 }
 
 .container {
@@ -15,21 +21,46 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.5s;
+}
+
+.container:hover {
+    transform: scale(1.05);
 }
 
 .title {
     color: #ff69b4;
     font-size: 2em;
     margin-bottom: 20px;
+    transition: color 0.5s;
+}
+
+.title:hover {
+    color: #ff1493;
 }
 
 .content {
     font-size: 1.2em;
     color: #333;
     margin-bottom: 20px;
+    transition: opacity 1s;
 }
 
 footer {
     color: #777;
     font-size: 0.9em;
+    transition: opacity 1s;
+}
+
+#toggleButton {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#toggleButton:hover {
+    background-color: #ff1493;
 }
